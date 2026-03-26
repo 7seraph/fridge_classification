@@ -1,0 +1,37 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>Milk_32.jpg</filename>
+	<path>/my-project-name/Milk_32.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>265</width>
+		<height>190</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>milk</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>157</xmin>
+			<ymin>34</ymin>
+			<xmax>203</xmax>
+			<ymax>161</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>milk</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>195</xmin>
+			<ymin>17</ymin>
+			<xmax>252</xmax>
+			<ymax>152</ymax>
+		</bndbox>
+	</object>
+</annotation>

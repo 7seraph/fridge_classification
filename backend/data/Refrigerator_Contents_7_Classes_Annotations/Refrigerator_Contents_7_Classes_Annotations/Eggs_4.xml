@@ -1,0 +1,37 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>Eggs_4.jpg</filename>
+	<path>/my-project-name/Eggs_4.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>276</width>
+		<height>182</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>eggs</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>51</xmin>
+			<ymin>36</ymin>
+			<xmax>125</xmax>
+			<ymax>154</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>eggs</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>108</xmin>
+			<ymin>10</ymin>
+			<xmax>198</xmax>
+			<ymax>62</ymax>
+		</bndbox>
+	</object>
+</annotation>

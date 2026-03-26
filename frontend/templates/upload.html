@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge Item Classifier</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Upload an Image of Your Fridge</h1>
+    <form action="/api/upload" method="POST" enctype="multipart/form-data">
+        <label for="image">Choose an image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <div id="results" style="display:none;">
+        <h2>Classification Results:</h2>
+        <ul id="results-list"></ul>
+        <div id="annotated-image-container" style="display:none;">
+            <h3>Annotated Image:</h3>
+            <img id="annotated-image" src="" alt="Annotated Image" style="max-width:100%;">
+        </div>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const resultsDiv = document.getElementById('results');
+        const resultsList = document.getElementById('results-list');
+        const annotatedImageContainer = document.getElementById('annotated-image-container');
+        const annotatedImage = document.getElementById('annotated-image');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const response = await fetch('/api/upload', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+            resultsList.innerHTML = '';
+
+            if (data.predictions) {
+                Object.entries(data.predictions).forEach(([label, confidence]) => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${label}: ${confidence}`;
+                    resultsList.appendChild(listItem);
+                });
+
+                // Display the annotated image
+                if (data.annotated_image_url) {
+                    annotatedImage.src = data.annotated_image_url;
+                    annotatedImageContainer.style.display = 'block';
+                }
+            } else {
+                resultsList.innerHTML = '<li>Error: ' + data.error + '</li>';
+            }
+
+            resultsDiv.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

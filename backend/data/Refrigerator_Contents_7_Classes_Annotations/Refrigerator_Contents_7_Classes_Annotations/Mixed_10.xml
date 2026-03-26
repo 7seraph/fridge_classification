@@ -1,0 +1,37 @@
+<annotation>
+	<folder>my-project-name</folder>
+	<filename>Mixed_10.jpg</filename>
+	<path>/my-project-name/Mixed_10.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>426</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>milk</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>147</xmin>
+			<ymin>11</ymin>
+			<xmax>231</xmax>
+			<ymax>224</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>milk</name>
+		<pose>Unspecified</pose>
+		<truncated>Unspecified</truncated>
+		<difficult>Unspecified</difficult>
+		<bndbox>
+			<xmin>242</xmin>
+			<ymin>4</ymin>
+			<xmax>323</xmax>
+			<ymax>228</ymax>
+		</bndbox>
+	</object>
+</annotation>

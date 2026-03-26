@@ -1,0 +1,16 @@
+# Exclude virtual environment
+.venv/
+
+# Exclude model files
+backend/data/fridge_model.h5
+
+# Exclude dataset files
+backend/data/Refrigerator_Contents_7_Classes_Dataset/
+
+# General exclusions
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+*.log
+*.tmp
